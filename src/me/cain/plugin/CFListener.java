@@ -29,12 +29,7 @@ public class CFListener extends PlayerListener {
 			p.sendMessage(CHEAT_MSG);
 		}
 		
-		return;
-		
-	}
-	
-	public void onPlayerLogin(PlayerLoginEvent e)
-	{
+
 		if(!PermissionsClass.pCheck(e.getPlayer(), "cf.allowfly") || !PermissionsClass.pCheck(e.getPlayer(), "cf.allowfly"))
 		{
 			if(CFBanner.cfg.getProperty("kick.kick-player-if-client-detected").equals(true))
@@ -42,7 +37,10 @@ public class CFListener extends PlayerListener {
 				e.getPlayer().kickPlayer(CFBanner.cfg.getProperty("kick.kickmessage").toString());
 			}
 		}
+		
+		
 		return;
+		
 	}
 
 }

@@ -16,7 +16,6 @@ public class CFBanner extends JavaPlugin {
 	{
 		System.out.println("[CFBanner] CFBanner has been enabled!");
 		Bukkit.getServer().getPluginManager().registerEvent(Type.PLAYER_JOIN, new CFListener(), Priority.Low, this);
-		Bukkit.getServer().getPluginManager().registerEvent(Type.PLAYER_LOGIN, new CFListener(), Priority.Normal, this);
 		PermissionsClass.setupPerms();
 		System.out.println("[CFBanner] " +  this.getDescription().getVersion() + " loaded!");
 		cfg = new Configuration(new File(this.getDataFolder(), "config.yml"));
