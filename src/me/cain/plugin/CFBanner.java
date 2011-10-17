@@ -14,7 +14,7 @@ public class CFBanner extends JavaPlugin {
 	
 	public void onEnable()
 	{
-		System.out.println("[CFBanner] Plugin has been enabled!");
+		System.out.println("[CFBanner] CFBanner has been enabled!");
 		Bukkit.getServer().getPluginManager().registerEvent(Type.PLAYER_JOIN, new CFListener(), Priority.Low, this);
 		Bukkit.getServer().getPluginManager().registerEvent(Type.PLAYER_LOGIN, new CFListener(), Priority.Normal, this);
 		PermissionsClass.setupPerms();
