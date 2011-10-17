@@ -1,0 +1,11 @@
+name: CFBanner
+version: 1.9.2
+author: CainFoool
+main: me.cain.plugin.CFBanner
+permissions:
+  cfbanner.*:
+    description: Allow everything
+  cfbanner.allowfly:
+    description: Allow users to fly
+  cfbanner.allowcheat:
+    description: Allow users to cheat
