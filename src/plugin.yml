@@ -1,6 +1,6 @@
 name: CFBanner
 version: 1.9.4
-author: CainFoool and Tauryuu
+author: CainFoool
 main: me.cain.plugin.CFBanner
 permissions:
     cfbanner.*:
