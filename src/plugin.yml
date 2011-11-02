@@ -1,11 +1,16 @@
 name: CFBanner
-version: 1.9.3
+version: 1.9.4
 author: CainFoool
 main: me.cain.plugin.CFBanner
 permissions:
-  cfbanner.*:
-    description: Allow everything
-  cfbanner.allowfly:
-    description: Allow users to fly
-  cfbanner.allowcheat:
-    description: Allow users to cheat
+    cfbanner.*:
+        description: Allow all cheat mods
+        children:
+            cf.allowfly: true
+            cf.allowcheat: true
+    cfbanner.allowfly:
+        description: Allow flying
+        default: op
+    cfbanner.allowcheat:
+        description: Allows cheating like xray and cheaty maps
+        default: op
