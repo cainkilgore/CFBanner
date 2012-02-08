@@ -1,4 +1,21 @@
 name: CFBanner
-version: 2.00
+version: 2.01
 author: CainFoool
 main: org.cain.cfbanner.CFBanner
+
+permissions:
+    cfbanner.*:
+        description: Enables all the supported mods
+        children:
+            cfbanner.zombe.fly: true
+            cfbanner.zombe.cheat: true
+            cfbanner.rei.minimap: true
+    cfbanner.zombe.fly:
+        description: Allows you to fly
+        default: op
+    cfbanner.zombe.cheat:
+        description: Allows you to cheat
+        default: op
+    cfbanner.rei.minimap:
+        description: Allows you to use SMP features from Rei's minimap
+        default: op
