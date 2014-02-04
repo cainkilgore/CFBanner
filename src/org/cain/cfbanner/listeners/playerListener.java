@@ -1,16 +1,21 @@
 package org.cain.cfbanner.listeners;
 
 import org.bukkit.entity.Player;
-import org.bukkit.event.player.PlayerListener;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerLoginEvent;
 
-public class playerListener extends PlayerListener {
+public class playerListener implements Listener {
 	
-	String ZOMBE_FLY = "ยงf ยงf ยง1 ยง0 ยง2 ยง4";
-	String ZOMBE_CHEAT = "ยงf ยงf ยง2 ยง0 ยง4 ยง8";
-	String ZOMBE_NOCLIP = "ยงf ยงf ยง4 ยง0 ยง9 ยง6";
+	String ZOMBE_FLY = "งf งf ง1 ง0 ง2 ง4";
+	String ZOMBE_CHEAT = "งf งf ง2 ง0 ง4 ง8";
+	String ZOMBE_NOCLIP = "งf งf ง4 ง0 ง9 ง6";
+	String REI_MINIMAP = "ง0 ง0 ง1 ง2 ง3 ง4 ง5 ง6 ง7 งe งf";
 	
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onPlayerLogin(PlayerLoginEvent e) {
+		
 		Player p = e.getPlayer();
 		if(!p.hasPermission("cfbanner.zombe.fly")) {
 			p.sendMessage(ZOMBE_FLY);
@@ -20,6 +25,9 @@ public class playerListener extends PlayerListener {
 		}
 		if(!p.hasPermission("cfbanner.zombe.noclip")) {
 			p.sendMessage(ZOMBE_NOCLIP);
+		}
+		if(p.hasPermission("cfbanner.rei.minimap")) {
+			p.sendMessage(REI_MINIMAP);
 		}
 		return;
 	}
