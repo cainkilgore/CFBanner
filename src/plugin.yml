@@ -1,4 +1,4 @@
 name: CFBanner
-version: 2.00
-author: CainFoool
+version: 2.1
+author: CainFoool, jascotty2
 main: org.cain.cfbanner.CFBanner
